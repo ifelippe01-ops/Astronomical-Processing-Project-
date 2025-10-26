@@ -25,7 +25,7 @@ namespace Astronomical_Processing
         int[] myArray = new int[max];
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+          asd
         }
         
         private void ShowArray()

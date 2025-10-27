@@ -16,19 +16,19 @@ namespace Astronomical_Processing
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1() // initialize empty
         {
             InitializeComponent();
             
         }
         static int max = 24;
         int[] myArray = new int[max];
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) // loaded after click on load button
         {
         
         }
         
-        private void ShowArray()
+        private void ShowArray() //method to display array 
         {
             listBox.Items.Clear();
             foreach (int value in myArray)
@@ -37,7 +37,7 @@ namespace Astronomical_Processing
             }
         }
 
-        private void sortButton_Click(object sender, EventArgs e)
+        private void sortButton_Click(object sender, EventArgs e) // bubble search code 
         {
             for (int outer = 0; outer < max - 1; outer++)
             {
@@ -54,32 +54,32 @@ namespace Astronomical_Processing
             ShowArray();
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void searchButton_Click(object sender, EventArgs e) // binary search code 
         {
             int target;
-            List<int> foundIndexes = new List<int>();
+            List<int> foundIndexes = new List<int>(); // list for multiple index fidings
             int lowBound = 0;
             int highBound = max - 1;
 
-            if (!Int32.TryParse(searchBox.Text, out target))
+            if (!Int32.TryParse(searchBox.Text, out target)) // if the input is not an integer displays error message, otherwise add to target
             {
                 MessageBox.Show("You must enter an integer");
                 return;
             }
-            while (lowBound <= highBound)
+            while (lowBound <= highBound) // search within the array 
             {
-                int mid = (lowBound + highBound) / 2;
+                int mid = (lowBound + highBound) / 2; //defines mid 
                 if (myArray[mid] == target)
                 {
                     foundIndexes.Add(mid);
 
-                    int down = mid - 1;
+                    int down = mid - 1; //lower search
                     while (down >= lowBound && myArray[down] == target)
                     {
                         foundIndexes.Add(down);
                         down--;
                     }
-                    int up = mid + 1;
+                    int up = mid + 1; //higher search
                     while (up <= highBound && myArray[up] == target)
                     {
                         foundIndexes.Add(up);
@@ -96,7 +96,7 @@ namespace Astronomical_Processing
                     lowBound = mid + 1;
                 }
             }
-            if (foundIndexes.Count == 0)
+            if (foundIndexes.Count == 0) // if the index is not on the list
             {
                 MessageBox.Show("Not found, try again.");
             }
@@ -107,24 +107,16 @@ namespace Astronomical_Processing
             }
         }
 
-                private void ShowArray(int low, int high)
-                {
-                    listBox.Items.Clear();
-                    for (int i = low; i < high; i++)
-                    {
-                        listBox.Items.Add(myArray[i]);
-                    }
-                }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            int slcIndex = listBox.SelectedIndex;
+            int slcIndex = listBox.SelectedIndex; // select index from the list 
             if (slcIndex == -1)
             {
                 MessageBox.Show("Select an Item from the box to edit");
                 return;
             }
-            int newData;
+            int newData; // add new data if its an int
             if (!Int32.TryParse(editBox.Text, out newData))
             {
                 MessageBox.Show("Invalid value, you must enter an integer");
@@ -133,10 +125,10 @@ namespace Astronomical_Processing
             myArray[slcIndex] = newData;
             ShowArray();
             MessageBox.Show("Data at index " + slcIndex + " has been replaced to " + newData);
-        }                   
+        }                 
             
 
-        private void loadButton_Click(object sender, EventArgs e)
+        private void loadButton_Click(object sender, EventArgs e) //load random data method
         {
             Random random = new Random();
             for (int i = 0; i < max; i++)

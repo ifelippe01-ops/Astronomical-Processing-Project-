@@ -136,7 +136,21 @@ namespace Astronomical_Processing
                 myArray[i] = random.Next(10, 91);
             }
             ShowArray();
-        }        
+        }
+
+        private void midExButton_Click(object sender, EventArgs e)
+        {           
+            double midex = (myArray[0] + myArray[23]) / 2.0;
+            midex = Math.Round(midex, 2);
+            textMidEx.Text = midex.ToString();            
+        }
+
+        private void avarageButton_Click(object sender, EventArgs e)
+        {
+            double avarage = myArray.Sum() / (double) myArray.Length;
+            avarage = Math.Round(avarage, 2);
+            textAvarage.Text = avarage.ToString();
+        }
     }
 }
 

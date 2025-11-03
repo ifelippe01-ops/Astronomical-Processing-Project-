@@ -40,7 +40,7 @@
             this.modeButton = new System.Windows.Forms.Button();
             this.textMode = new System.Windows.Forms.TextBox();
             this.avarageButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textAvarage = new System.Windows.Forms.TextBox();
             this.rangeButton = new System.Windows.Forms.Button();
             this.textRange = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -120,6 +120,7 @@
             this.midExButton.TabIndex = 7;
             this.midExButton.Text = "Mid-Ex";
             this.midExButton.UseVisualStyleBackColor = true;
+            this.midExButton.Click += new System.EventHandler(this.midExButton_Click);
             // 
             // textMidEx
             // 
@@ -154,14 +155,15 @@
             this.avarageButton.TabIndex = 11;
             this.avarageButton.Text = "Avarage ";
             this.avarageButton.UseVisualStyleBackColor = true;
+            this.avarageButton.Click += new System.EventHandler(this.avarageButton_Click);
             // 
-            // textBox1
+            // textAvarage
             // 
-            this.textBox1.Location = new System.Drawing.Point(688, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 12;
+            this.textAvarage.Location = new System.Drawing.Point(688, 187);
+            this.textAvarage.Name = "textAvarage";
+            this.textAvarage.ReadOnly = true;
+            this.textAvarage.Size = new System.Drawing.Size(100, 26);
+            this.textAvarage.TabIndex = 12;
             // 
             // rangeButton
             // 
@@ -187,7 +189,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textRange);
             this.Controls.Add(this.rangeButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textAvarage);
             this.Controls.Add(this.avarageButton);
             this.Controls.Add(this.textMode);
             this.Controls.Add(this.modeButton);
@@ -222,7 +224,7 @@
         private System.Windows.Forms.Button modeButton;
         private System.Windows.Forms.TextBox textMode;
         private System.Windows.Forms.Button avarageButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textAvarage;
         private System.Windows.Forms.Button rangeButton;
         private System.Windows.Forms.TextBox textRange;
     }

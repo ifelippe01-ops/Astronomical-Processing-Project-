@@ -35,6 +35,14 @@
             this.editButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
             this.sortButton = new System.Windows.Forms.Button();
+            this.midExButton = new System.Windows.Forms.Button();
+            this.textMidEx = new System.Windows.Forms.TextBox();
+            this.modeButton = new System.Windows.Forms.Button();
+            this.textMode = new System.Windows.Forms.TextBox();
+            this.avarageButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rangeButton = new System.Windows.Forms.Button();
+            this.textRange = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // searchBox
@@ -104,11 +112,87 @@
             this.sortButton.UseVisualStyleBackColor = false;
             this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
+            // midExButton
+            // 
+            this.midExButton.Location = new System.Drawing.Point(688, 65);
+            this.midExButton.Name = "midExButton";
+            this.midExButton.Size = new System.Drawing.Size(100, 26);
+            this.midExButton.TabIndex = 7;
+            this.midExButton.Text = "Mid-Ex";
+            this.midExButton.UseVisualStyleBackColor = true;
+            // 
+            // textMidEx
+            // 
+            this.textMidEx.Location = new System.Drawing.Point(688, 33);
+            this.textMidEx.Name = "textMidEx";
+            this.textMidEx.ReadOnly = true;
+            this.textMidEx.Size = new System.Drawing.Size(100, 26);
+            this.textMidEx.TabIndex = 8;
+            // 
+            // modeButton
+            // 
+            this.modeButton.Location = new System.Drawing.Point(688, 142);
+            this.modeButton.Name = "modeButton";
+            this.modeButton.Size = new System.Drawing.Size(100, 26);
+            this.modeButton.TabIndex = 9;
+            this.modeButton.Text = "Mode";
+            this.modeButton.UseVisualStyleBackColor = true;
+            // 
+            // textMode
+            // 
+            this.textMode.Location = new System.Drawing.Point(688, 110);
+            this.textMode.Name = "textMode";
+            this.textMode.ReadOnly = true;
+            this.textMode.Size = new System.Drawing.Size(100, 26);
+            this.textMode.TabIndex = 10;
+            // 
+            // avarageButton
+            // 
+            this.avarageButton.Location = new System.Drawing.Point(688, 219);
+            this.avarageButton.Name = "avarageButton";
+            this.avarageButton.Size = new System.Drawing.Size(100, 27);
+            this.avarageButton.TabIndex = 11;
+            this.avarageButton.Text = "Avarage ";
+            this.avarageButton.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(688, 187);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 12;
+            // 
+            // rangeButton
+            // 
+            this.rangeButton.Location = new System.Drawing.Point(688, 299);
+            this.rangeButton.Name = "rangeButton";
+            this.rangeButton.Size = new System.Drawing.Size(100, 28);
+            this.rangeButton.TabIndex = 13;
+            this.rangeButton.Text = "Range";
+            this.rangeButton.UseVisualStyleBackColor = true;
+            // 
+            // textRange
+            // 
+            this.textRange.Location = new System.Drawing.Point(688, 267);
+            this.textRange.Name = "textRange";
+            this.textRange.ReadOnly = true;
+            this.textRange.Size = new System.Drawing.Size(100, 26);
+            this.textRange.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textRange);
+            this.Controls.Add(this.rangeButton);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.avarageButton);
+            this.Controls.Add(this.textMode);
+            this.Controls.Add(this.modeButton);
+            this.Controls.Add(this.textMidEx);
+            this.Controls.Add(this.midExButton);
             this.Controls.Add(this.sortButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.editButton);
@@ -133,6 +217,14 @@
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button sortButton;
+        private System.Windows.Forms.Button midExButton;
+        private System.Windows.Forms.TextBox textMidEx;
+        private System.Windows.Forms.Button modeButton;
+        private System.Windows.Forms.TextBox textMode;
+        private System.Windows.Forms.Button avarageButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button rangeButton;
+        private System.Windows.Forms.TextBox textRange;
     }
 }
 

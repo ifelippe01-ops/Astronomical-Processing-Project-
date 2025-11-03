@@ -38,11 +38,11 @@
             this.midExButton = new System.Windows.Forms.Button();
             this.textMidEx = new System.Windows.Forms.TextBox();
             this.modeButton = new System.Windows.Forms.Button();
-            this.textMode = new System.Windows.Forms.TextBox();
             this.avarageButton = new System.Windows.Forms.Button();
             this.textAvarage = new System.Windows.Forms.TextBox();
             this.rangeButton = new System.Windows.Forms.Button();
             this.textRange = new System.Windows.Forms.TextBox();
+            this.linearSearchButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchBox
@@ -93,9 +93,9 @@
             // loadButton
             // 
             this.loadButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.loadButton.Location = new System.Drawing.Point(12, 323);
+            this.loadButton.Location = new System.Drawing.Point(92, 323);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(99, 29);
+            this.loadButton.Size = new System.Drawing.Size(65, 29);
             this.loadButton.TabIndex = 5;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = false;
@@ -104,9 +104,9 @@
             // sortButton
             // 
             this.sortButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.sortButton.Location = new System.Drawing.Point(140, 323);
+            this.sortButton.Location = new System.Drawing.Point(176, 323);
             this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(100, 29);
+            this.sortButton.Size = new System.Drawing.Size(64, 29);
             this.sortButton.TabIndex = 6;
             this.sortButton.Text = "Sort";
             this.sortButton.UseVisualStyleBackColor = false;
@@ -132,24 +132,19 @@
             // 
             // modeButton
             // 
-            this.modeButton.Location = new System.Drawing.Point(688, 142);
+            this.modeButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.modeButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.modeButton.Location = new System.Drawing.Point(12, 323);
             this.modeButton.Name = "modeButton";
-            this.modeButton.Size = new System.Drawing.Size(100, 26);
+            this.modeButton.Size = new System.Drawing.Size(63, 26);
             this.modeButton.TabIndex = 9;
             this.modeButton.Text = "Mode";
-            this.modeButton.UseVisualStyleBackColor = true;
-            // 
-            // textMode
-            // 
-            this.textMode.Location = new System.Drawing.Point(688, 110);
-            this.textMode.Name = "textMode";
-            this.textMode.ReadOnly = true;
-            this.textMode.Size = new System.Drawing.Size(100, 26);
-            this.textMode.TabIndex = 10;
+            this.modeButton.UseVisualStyleBackColor = false;
+            this.modeButton.Click += new System.EventHandler(this.modeButton_Click);
             // 
             // avarageButton
             // 
-            this.avarageButton.Location = new System.Drawing.Point(688, 219);
+            this.avarageButton.Location = new System.Drawing.Point(688, 139);
             this.avarageButton.Name = "avarageButton";
             this.avarageButton.Size = new System.Drawing.Size(100, 27);
             this.avarageButton.TabIndex = 11;
@@ -159,7 +154,7 @@
             // 
             // textAvarage
             // 
-            this.textAvarage.Location = new System.Drawing.Point(688, 187);
+            this.textAvarage.Location = new System.Drawing.Point(688, 107);
             this.textAvarage.Name = "textAvarage";
             this.textAvarage.ReadOnly = true;
             this.textAvarage.Size = new System.Drawing.Size(100, 26);
@@ -167,31 +162,43 @@
             // 
             // rangeButton
             // 
-            this.rangeButton.Location = new System.Drawing.Point(688, 299);
+            this.rangeButton.Location = new System.Drawing.Point(688, 215);
             this.rangeButton.Name = "rangeButton";
             this.rangeButton.Size = new System.Drawing.Size(100, 28);
             this.rangeButton.TabIndex = 13;
             this.rangeButton.Text = "Range";
             this.rangeButton.UseVisualStyleBackColor = true;
+            this.rangeButton.Click += new System.EventHandler(this.rangeButton_Click);
             // 
             // textRange
             // 
-            this.textRange.Location = new System.Drawing.Point(688, 267);
+            this.textRange.Location = new System.Drawing.Point(688, 183);
             this.textRange.Name = "textRange";
             this.textRange.ReadOnly = true;
             this.textRange.Size = new System.Drawing.Size(100, 26);
             this.textRange.TabIndex = 14;
+            // 
+            // linearSearchButton
+            // 
+            this.linearSearchButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.linearSearchButton.Location = new System.Drawing.Point(274, 102);
+            this.linearSearchButton.Name = "linearSearchButton";
+            this.linearSearchButton.Size = new System.Drawing.Size(99, 26);
+            this.linearSearchButton.TabIndex = 15;
+            this.linearSearchButton.Text = "Linear Search";
+            this.linearSearchButton.UseVisualStyleBackColor = false;
+            this.linearSearchButton.Click += new System.EventHandler(this.linearSearchButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linearSearchButton);
             this.Controls.Add(this.textRange);
             this.Controls.Add(this.rangeButton);
             this.Controls.Add(this.textAvarage);
             this.Controls.Add(this.avarageButton);
-            this.Controls.Add(this.textMode);
             this.Controls.Add(this.modeButton);
             this.Controls.Add(this.textMidEx);
             this.Controls.Add(this.midExButton);
@@ -222,11 +229,11 @@
         private System.Windows.Forms.Button midExButton;
         private System.Windows.Forms.TextBox textMidEx;
         private System.Windows.Forms.Button modeButton;
-        private System.Windows.Forms.TextBox textMode;
         private System.Windows.Forms.Button avarageButton;
         private System.Windows.Forms.TextBox textAvarage;
         private System.Windows.Forms.Button rangeButton;
         private System.Windows.Forms.TextBox textRange;
+        private System.Windows.Forms.Button linearSearchButton;
     }
 }
 

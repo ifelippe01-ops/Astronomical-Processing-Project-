@@ -151,6 +151,33 @@ namespace Astronomical_Processing
             avarage = Math.Round(avarage, 2);
             textAvarage.Text = avarage.ToString();
         }
+
+        private void rangeButton_Click(object sender, EventArgs e)
+        {
+            int range = myArray[23] - myArray[0];
+            textRange.Text = range.ToString();
+        }
+
+        private void modeButton_Click(object sender, EventArgs e)
+        {
+            IEnumerable<IGrouping<int, int>> groups = myArray.GroupBy(n => n);
+            int maxCount = groups.Max(g => g.Count());
+
+            List<int> modes = new List<int>();
+            foreach (IGrouping<int, int> group in groups)
+            {
+                if (group.Count() == maxCount)
+                {
+                    modes.Add(group.Key);
+                }
+            }
+            MessageBox.Show("Modes: " + string.Join(", ", modes) + " apears " + maxCount + " times.");
+        }
+
+        private void linearSearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -144,7 +144,7 @@ namespace Astronomical_Processing
             }
             ShowArray();
         }
-
+        // mathematical calculations 
         private void midExButton_Click(object sender, EventArgs e) // mathematical function to calculate the mid extreme
         {           
             double midex = (myArray[0] + myArray[23]) / 2.0;
@@ -180,7 +180,7 @@ namespace Astronomical_Processing
             }
             MessageBox.Show("Modes: " + string.Join(", ", modes) + " apears " + maxCount + " times."); // displays each number and their frequency
         }
-
+        // sequential search 
         private void linearSearchButton_Click(object sender, EventArgs e)
         {
             int target;

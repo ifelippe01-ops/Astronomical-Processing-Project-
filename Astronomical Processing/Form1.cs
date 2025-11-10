@@ -1,4 +1,11 @@
-﻿
+﻿/* Igor Cruz - Sprint 2 
+10/11/2025
+Version 2.0
+Astronomical Processing 
+Program to manage astronomical data, loading, editing, searching this data. 
+Also performs mathematical calculations such and average, mode and mid extreme
+*/
+
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -45,7 +52,7 @@ namespace Astronomical_Processing
                 {
                     if (myArray[inner] > myArray[inner + 1])
                     {
-                        int temp = myArray[inner];
+                        int temp = myArray[inner]; // swap method
                         myArray[inner] = myArray[inner + 1];
                         myArray[inner + 1] = temp;
                     }
@@ -138,21 +145,21 @@ namespace Astronomical_Processing
             ShowArray();
         }
 
-        private void midExButton_Click(object sender, EventArgs e)
+        private void midExButton_Click(object sender, EventArgs e) // mathematical function to calculate the mid extreme
         {           
             double midex = (myArray[0] + myArray[23]) / 2.0;
             midex = Math.Round(midex, 2);
             textMidEx.Text = midex.ToString();            
         }
 
-        private void avarageButton_Click(object sender, EventArgs e)
+        private void avarageButton_Click(object sender, EventArgs e) // mathematical function to calculate the avarage value 
         {
             double avarage = myArray.Sum() / (double) myArray.Length;
             avarage = Math.Round(avarage, 2);
             textAvarage.Text = avarage.ToString();
         }
 
-        private void rangeButton_Click(object sender, EventArgs e)
+        private void rangeButton_Click(object sender, EventArgs e) // mathematical function to calculate the range
         {
             int range = myArray[23] - myArray[0];
             textRange.Text = range.ToString();
@@ -163,7 +170,7 @@ namespace Astronomical_Processing
             IEnumerable<IGrouping<int, int>> groups = myArray.GroupBy(n => n);
             int maxCount = groups.Max(g => g.Count());
 
-            List<int> modes = new List<int>();
+            List<int> modes = new List<int>(); // collects the numbers
             foreach (IGrouping<int, int> group in groups)
             {
                 if (group.Count() == maxCount)
@@ -171,7 +178,7 @@ namespace Astronomical_Processing
                     modes.Add(group.Key);
                 }
             }
-            MessageBox.Show("Modes: " + string.Join(", ", modes) + " apears " + maxCount + " times.");
+            MessageBox.Show("Modes: " + string.Join(", ", modes) + " apears " + maxCount + " times."); // displays each number and their frequency
         }
 
         private void linearSearchButton_Click(object sender, EventArgs e)
@@ -185,10 +192,10 @@ namespace Astronomical_Processing
             listBox.Items.Clear();
             for (int x = 0; x < max; x++)
             {
-                listBox.Items.Add(x + myArray[x]);
+                listBox.Items.Add(x + myArray[x]); 
                 if (myArray[x] == target)
                 {
-                    string message = ("Found at index: " +  x);
+                    string message = ("Found at index: " +  x); // displays each result 
                     MessageBox.Show(message);
                     found = true;
                 }
@@ -197,7 +204,7 @@ namespace Astronomical_Processing
             {
                 MessageBox.Show("Not found, try again");
             }
-        }
+        }        
     }
 }
 

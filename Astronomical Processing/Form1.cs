@@ -117,7 +117,7 @@ namespace Astronomical_Processing
                 return;
             }
             int newData; // add new data if its an int
-            if (!Int32.TryParse(editBox.Text, out newData))
+            if (!Int32.TryParse(searchBox.Text, out newData))
             {
                 MessageBox.Show("Invalid value, you must enter an integer");
                 return;
@@ -176,7 +176,27 @@ namespace Astronomical_Processing
 
         private void linearSearchButton_Click(object sender, EventArgs e)
         {
-
+            int target;
+            bool found = false;            
+            if (!(Int32.TryParse(searchBox.Text, out target)))
+            {
+                MessageBox.Show("You need to enter an integer");
+            }
+            listBox.Items.Clear();
+            for (int x = 0; x < max; x++)
+            {
+                listBox.Items.Add(x + myArray[x]);
+                if (myArray[x] == target)
+                {
+                    string message = ("Found at index: " +  x);
+                    MessageBox.Show(message);
+                    found = true;
+                }
+            }
+            if (!found)
+            {
+                MessageBox.Show("Not found, try again");
+            }
         }
     }
 }

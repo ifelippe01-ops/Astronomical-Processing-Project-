@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.editBox = new System.Windows.Forms.TextBox();
             this.listBox = new System.Windows.Forms.ListBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
@@ -51,13 +50,6 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(100, 26);
             this.searchBox.TabIndex = 0;
-            // 
-            // editBox
-            // 
-            this.editBox.Location = new System.Drawing.Point(408, 33);
-            this.editBox.Name = "editBox";
-            this.editBox.Size = new System.Drawing.Size(100, 26);
-            this.editBox.TabIndex = 1;
             // 
             // listBox
             // 
@@ -82,7 +74,7 @@
             // editButton
             // 
             this.editButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.editButton.Location = new System.Drawing.Point(408, 67);
+            this.editButton.Location = new System.Drawing.Point(273, 134);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(100, 29);
             this.editButton.TabIndex = 4;
@@ -207,7 +199,6 @@
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.listBox);
-            this.Controls.Add(this.editBox);
             this.Controls.Add(this.searchBox);
             this.Name = "Form1";
             this.Text = "Astronomical Processing";
@@ -220,7 +211,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.TextBox editBox;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button editButton;
